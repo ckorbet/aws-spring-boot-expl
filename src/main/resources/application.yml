@@ -1,0 +1,45 @@
+server:
+ servlet:
+  context-path: /cartorgon
+ port: 8080
+ 
+info:
+ application:
+  name: getip-aws-spring-boot-expl
+  description: Demo for EC2 with ELB
+  type: Spring Boot 2 RESTful MicroService for AWS EC2 with ELB
+  version: 0.0.1-SNAPSHOT
+ developers:
+  - author:     
+     name: Carlos Torres
+     role: Architect
+  - author:     
+     name: Carlos Torres
+     role: Backend developer
+ contributors:
+  - author:     
+     name: Carlos Torres
+     role: Tester
+
+management:
+ server:
+  port: 8081
+ endpoint:
+  shutdown:
+   enabled: true
+ endpoints:
+  beans:
+   enabled: false
+  web:
+   base-path: /cartorgon/actuator
+   exposure:
+    include: '*'
+    exclude: loggers
+ security:
+  enabled: false
+
+spring:
+ application:
+  name: getip-aws-spring-boot-expl
+ jmx:
+  default-domain: getip.aws.spring.boot.expl
